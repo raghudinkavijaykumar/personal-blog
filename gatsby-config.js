@@ -19,4 +19,5 @@ module.exports = {
         },
       },
     ],
+    pathPrefix: "/personal-blog"
   }
