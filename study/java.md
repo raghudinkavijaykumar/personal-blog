@@ -47,10 +47,10 @@ Bundling code into individual software objects provides a number of benefits, in
 **A *class* is the blueprint from which individual objects are created**.
 
 ``` java
- class NewClass {
+class NewClass {
      //Constructor or default                                             
      //Fields and Methods(based on its behaviour)                         
- }       
+}       
 ```
 
 You may have noticed that the NewClass** class does not contain a main method**. That's because it's not a complete application; Here's a AppClass class that creates objects of new class and performs some operations.
