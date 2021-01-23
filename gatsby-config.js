@@ -35,13 +35,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/study/gradle/docs`,
-        name: `gradle`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         path: `${__dirname}/study/git/docs`,
         name: `git`,
         ignore: [`**/\*-orig.md`],
