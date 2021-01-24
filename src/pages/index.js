@@ -2,13 +2,6 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import { Layout } from "../components/Layout";
 import styled from "styled-components";
-import Dump from "../components/Dump";
-
-/*
-const StyledH1 = styled.h1`
-  color: rebeccapurple;
-`
-*/
 
 const IndexWrapper = styled.main``;
 const PostWrapper = styled.div``;
