@@ -2,9 +2,11 @@ module.exports = {
   siteMetadata: {
     title: `The Study Blog`,
     description: `This is personal study blog`,
+    siteUrl: `http://localhost:9988`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
