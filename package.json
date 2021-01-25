@@ -18,12 +18,13 @@
   "license": "ISC",
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.12.12",
+    "@material-ui/core": "^4.11.3",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^2.30.3",
     "gatsby-plugin-mdx": "^1.8.0",
-    "gatsby-plugin-react-helmet": "^3.9.0", // Added not used yet
+    "gatsby-plugin-react-helmet": "^3.9.0",
     "gatsby-plugin-sitemap": "^2.11.0",
     "gatsby-plugin-styled-components": "^3.8.0",
     "gatsby-remark-prismjs": "^3.11.0",
