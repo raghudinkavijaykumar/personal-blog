@@ -42,7 +42,6 @@ module.exports = {
       options: {
         path: `${__dirname}/study/git/docs`,
         name: `git`,
-        ignore: [`**/\*-orig.md`],
       },
     },/*
     {
