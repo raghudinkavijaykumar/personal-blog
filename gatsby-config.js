@@ -1,4 +1,7 @@
 module.exports = {
+  flags: {
+    THE_FLAG: false
+  },
   siteMetadata: {
     title: `The Study Blog`,
     description: `This is personal study blog`,
@@ -88,10 +91,21 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-remark-autolink-headers`,
+          {
+            resolve: `gatsby-remark-table-of-contents`,
+            options: {
+              exclude: "Table of Contents",
+              tight: false,
+              ordered: false,
+              fromHeading: 1,
+              toHeading: 6,
+            },
+          },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: `language-`,
+              
             },
           },
         ],
@@ -100,3 +114,4 @@ module.exports = {
   ],
   pathPrefix: `/personal-blog`,
 };
+
