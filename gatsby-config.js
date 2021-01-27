@@ -43,14 +43,14 @@ module.exports = {
         path: `${__dirname}/study/git/docs`,
         name: `git`,
       },
-    },/*
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/study/html/docs`,
         name: `html`
       },
-    },*/
+    },
       {
         resolve: `gatsby-source-filesystem`,
         options: {
@@ -64,7 +64,7 @@ module.exports = {
           path: `${__dirname}/study/javascript/docs`,
           name: `javascript`,
         },
-      },/*
+      },
       {
         resolve: `gatsby-source-filesystem`,
         options: {
@@ -85,7 +85,7 @@ module.exports = {
           path: `${__dirname}/study/kubernetes/docs`,
           name: `kubernetes`,
         },
-      },*/
+      },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
