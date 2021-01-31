@@ -1,9 +1,14 @@
-import { Link } from 'gatsby'
-import React from 'react'
+import { Link } from "gatsby";
+import React from "react";
 
-export const Header = ({ siteTitle, siteDescription }) => (
-  <Link to="/">
-    <h1>{siteTitle}</h1>
-    <p>{siteDescription}</p>
-  </Link>
-)
+export const Header = (props) => {
+  // this.props.siteTitle = "Something else";
+  return (
+    <>
+      <Link to="/">
+        <h1>{props.siteTitle}</h1>
+        <p>{props.siteDescription}</p>
+      </Link>
+    </>
+  );
+};
