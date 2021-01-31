@@ -1,5 +1,5 @@
 import React from "react";
-import AppToolbar from "./interface/AppToolbar";
+import AppToolbar from "./AppToolbar";
 
 export default function Header(props: { siteTitle: String; }) {
   return (

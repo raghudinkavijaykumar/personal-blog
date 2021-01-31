@@ -3,9 +3,9 @@ module.exports = {
     THE_FLAG: false
   },
   siteMetadata: {
-    title: `The Study Blog`,
+    title: `Raghu's Blog`,
     description: `This is personal study blog`,
-    siteUrl: `http://localhost:9988`,
+    siteUrl: `http://localhost:9988`, //To be changed in production
   },
   plugins: [
     `gatsby-plugin-styled-components`,

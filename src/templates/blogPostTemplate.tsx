@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import Layout from "../components/Layout";
+import Layout from "../components/interface/Layout";
 
 export default (props: {
   data: { mdx: { frontmatter: any; body: any; tableOfContents: any } };

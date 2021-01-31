@@ -1,8 +1,10 @@
+import { Container, CssBaseline } from "@material-ui/core";
 import { graphql, Link } from "gatsby";
 import React from "react";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
-import Layout from "../components/Layout";
+import Footer from "../components/interface/Footer";
+import Layout from "../components/interface/Layout";
 
 const IndexWrapper = styled.main``;
 const PostWrapper = styled.div``;
@@ -23,6 +25,8 @@ export default (props: {
         />
         <meta name="author" content="Raghu Dinka Vijaykumar"></meta>
       </Helmet>
+      <Container maxWidth="lg">
+      <CssBaseline />
       <Layout>
         <IndexWrapper>
           {props.data.allMdx.nodes.map(
@@ -45,6 +49,8 @@ export default (props: {
         </Fab>
       </ScrollTop>*/}
       </Layout>
+      <Footer title="Footer" description="Something here to give the footer a purpose!" />
+      </Container>
     </>
   );
 };
