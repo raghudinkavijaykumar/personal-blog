@@ -1,50 +1,84 @@
-import Toolbar from "@material-ui/core/Toolbar";
-import React, { constructor } from "react";
-import ReactDom from "react-dom";
-import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
+import { makeStyles } from "@material-ui/core/styles";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
 import MenuIcon from "@material-ui/icons/Menu";
-import { render } from "react-dom";
+import SearchIcon from "@material-ui/icons/Search";
+import { Link } from "gatsby";
+import React from "react";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
+  toolbar: {
+    borderBottom: `1px solid ${theme.palette.divider}`,
   },
-  appBar: {
-    backgroundColor: "white",
-  },
-  menuButton: {
+  toolbarMenuButton: {
     marginRight: theme.spacing(2),
     color: "black",
   },
-  title: {
-    flexGrow: 1,
-    color: "black",
+  toolbarTitle: {
+    flex: 1,
+    fontStyle: "h2",
+    alignSelf: "center",
+  },
+  toobarTitleLink: {
+    textDecoration: "none",
+    color: "inherit",
+  },
+  toolbarSecondary: {
+    justifyContent: "space-between",
+    overflowX: "auto",
+  },
+  toolbarLink: {
+    padding: theme.spacing(1),
+    flexShrink: 0,
   },
 }));
 
-export default function AppToolbar () {
+export default function AppToolbar(props: { siteTitle: React.ReactNode; }) {
   const classes = useStyles();
-    return (
-      <div className={classes.root}>
-        <AppBar position="static" className={classes.appBar}>
-          <Toolbar>
-            <IconButton
-              edge="start"
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="menu"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" className={classes.title}>
-              Blog
-            </Typography>
-          </Toolbar>
-        </AppBar>
-      </div>
-    );
+  return (
+    <React.Fragment>
+      <Toolbar className={classes.toolbar}>
+        <IconButton
+          edge="start"
+          className={classes.toolbarMenuButton}
+          color="inherit"
+          aria-label="menu"
+        >
+          <MenuIcon />
+        </IconButton>
+        <Typography
+          align="center"
+          variant="h5"
+          noWrap
+          className={classes.toolbarTitle}
+        >
+          <Link to="/" className={classes.toobarTitleLink}>
+            {props.siteTitle}
+          </Link>
+        </Typography>
+        <IconButton>
+          <SearchIcon />
+        </IconButton>
+      </Toolbar>
+      {/* <Toolbar
+        component="nav"
+        variant="dense"
+        className={classes.toolbarSecondary}
+      >
+        {sections.map((section) => (
+          <Link
+            color="inherit"
+            noWrap
+            key={section.title}
+            variant="body2"
+            href={section.url}
+            className={classes.toolbarLink}
+          >
+            {section.title}
+          </Link>
+        ))}
+      </Toolbar> */}
+    </React.Fragment>
+  );
 }
-

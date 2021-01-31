@@ -1,14 +1,19 @@
-import React from "react";
 import { graphql, Link } from "gatsby";
-import { Layout } from "../components/Layout";
-import styled from "styled-components";
+import React from "react";
 import { Helmet } from "react-helmet";
-import { AppToolbar } from "../components/interface/app-toolbar"
+import styled from "styled-components";
+import Layout from "../components/Layout";
 
 const IndexWrapper = styled.main``;
 const PostWrapper = styled.div``;
 
-export default ({ data }) => {
+export default (props: {
+  data: {
+    allMdx: {
+      nodes: { id: any; excerpt: any; frontmatter: any; fields: any }[];
+    };
+  };
+}) => {
   return (
     <>
       <Helmet>
@@ -16,12 +21,11 @@ export default ({ data }) => {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
-        <meta name="author" content="Raghu Dinka Vijaykumar" ></meta>
+        <meta name="author" content="Raghu Dinka Vijaykumar"></meta>
       </Helmet>
-      <AppToolbar />
       <Layout>
         <IndexWrapper>
-          {data.allMdx.nodes.map(
+          {props.data.allMdx.nodes.map(
             ({ id, excerpt, frontmatter, fields }) => (
               <>
                 <PostWrapper key={id}>
@@ -35,6 +39,11 @@ export default ({ data }) => {
             )
           )}
         </IndexWrapper>
+        {/*<ScrollTop {...props}>
+        <Fab color="secondary" size="small" aria-label="scroll back to top">
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollTop>*/}
       </Layout>
     </>
   );
@@ -52,7 +61,7 @@ export const query = graphql`
         }
         body
         fields {
-            slug
+          slug
         }
       }
     }

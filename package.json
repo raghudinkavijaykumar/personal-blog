@@ -3,7 +3,7 @@
   "name": "personal-blog",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.tsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "SET NODE_OPTIONS=--max-old-space-size=8192 && gatsby develop -p 9988 -o",
@@ -47,6 +47,8 @@
     "typescript": "^4.1.3"
   },
   "devDependencies": {
+    "@types/react-helmet": "^6.1.0",
+    "@types/styled-components": "^5.1.7",
     "babel-preset-gatsby": "^0.10.0"
   },
   "resolutions": {
