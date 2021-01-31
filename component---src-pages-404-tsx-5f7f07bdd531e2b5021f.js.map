@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/404.tsx"],"names":["Page404"],"mappings":"6FAAA,wEAEe,SAASA,IACtB,OAAO","file":"component---src-pages-404-tsx-5f7f07bdd531e2b5021f.js","sourcesContent":["import React from \"react\";\r\n\r\nexport default function Page404() {\r\n  return <h1>404 Not Found</h1>;\r\n};\r\n"],"sourceRoot":""}
