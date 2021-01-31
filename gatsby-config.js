@@ -8,6 +8,7 @@ module.exports = {
     siteUrl: `http://localhost:9988`, //To be changed in production
   },
   plugins: [
+    `gatsby-plugin-feed`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sitemap`,
     {
@@ -36,7 +37,7 @@ module.exports = {
         path: `${__dirname}/study/css/docs`,
         name: `css`,
       },
-    },
+    },/*
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -50,7 +51,7 @@ module.exports = {
         path: `${__dirname}/study/html/docs`,
         name: `html`
       },
-    },
+    },*/
       {
         resolve: `gatsby-source-filesystem`,
         options: {
@@ -64,14 +65,14 @@ module.exports = {
           path: `${__dirname}/study/javascript/docs`,
           name: `javascript`,
         },
-      },
+      },/*
       {
         resolve: `gatsby-source-filesystem`,
         options: {
           path: `${__dirname}/study/react/docs`,
           name: `react`,
         },
-      },
+      },*/
       {
         resolve: `gatsby-source-filesystem`,
         options: {
