@@ -26,30 +26,33 @@ export default (props: {
         <meta name="author" content="Raghu Dinka Vijaykumar"></meta>
       </Helmet>
       <Container maxWidth="lg">
-      <CssBaseline />
-      <Layout>
-        <IndexWrapper>
-          {props.data.allMdx.nodes.map(
-            ({ id, excerpt, frontmatter, fields }) => (
-              <>
-                <PostWrapper key={id}>
-                  <Link to={fields.slug}>
-                    <h1>{frontmatter.title}</h1>
-                    <p>{frontmatter.date}</p>
-                    <p>{excerpt}</p>
-                  </Link>
-                </PostWrapper>
-              </>
-            )
-          )}
-        </IndexWrapper>
-        {/*<ScrollTop {...props}>
+        <CssBaseline />
+        <Layout>
+          <IndexWrapper>
+            {props.data.allMdx.nodes.map(
+              ({ id, excerpt, frontmatter, fields }) => (
+                <>
+                  <PostWrapper key={id}>
+                    <Link to={fields.slug}>
+                      <h1>{frontmatter.title}</h1>
+                      <p>{frontmatter.date}</p>
+                      <p>{excerpt}</p>
+                    </Link>
+                  </PostWrapper>
+                </>
+              )
+            )}
+          </IndexWrapper>
+          {/*<ScrollTop {...props}>
         <Fab color="secondary" size="small" aria-label="scroll back to top">
           <KeyboardArrowUpIcon />
         </Fab>
       </ScrollTop>*/}
-      </Layout>
-      <Footer title="Footer" description="Something here to give the footer a purpose!" />
+        </Layout>
+        <Footer
+          title="Footer"
+          description="Something here to give the footer a purpose!"
+        />
       </Container>
     </>
   );

@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function AppToolbar(props: { siteTitle: React.ReactNode; }) {
+export default function AppToolbar(props: { siteTitle: React.ReactNode }) {
   const classes = useStyles();
   return (
     <React.Fragment>

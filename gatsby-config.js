@@ -1,6 +1,6 @@
 module.exports = {
   flags: {
-    THE_FLAG: false
+    THE_FLAG: false,
   },
   siteMetadata: {
     title: `Raghu's Blog`,
@@ -37,7 +37,7 @@ module.exports = {
         path: `${__dirname}/study/css/docs`,
         name: `css`,
       },
-    },/*
+    } /*
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -51,42 +51,42 @@ module.exports = {
         path: `${__dirname}/study/html/docs`,
         name: `html`
       },
-    },*/
-      {
-        resolve: `gatsby-source-filesystem`,
-        options: {
-          path: `${__dirname}/study/computational-linguistics/docs`,
-          name: `computational-linguistics`,
-        },
+    },*/,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/study/computational-linguistics/docs`,
+        name: `computational-linguistics`,
       },
-      {
-        resolve: `gatsby-source-filesystem`,
-        options: {
-          path: `${__dirname}/study/javascript/docs`,
-          name: `javascript`,
-        },
-      },/*
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/study/javascript/docs`,
+        name: `javascript`,
+      },
+    } /*
       {
         resolve: `gatsby-source-filesystem`,
         options: {
           path: `${__dirname}/study/react/docs`,
           name: `react`,
         },
-      },*/
-      {
-        resolve: `gatsby-source-filesystem`,
-        options: {
-          path: `${__dirname}/study/docker/docs`,
-          name: `docker`,
-        },
+      },*/,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/study/docker/docs`,
+        name: `docker`,
       },
-      {
-        resolve: `gatsby-source-filesystem`,
-        options: {
-          path: `${__dirname}/study/kubernetes/docs`,
-          name: `kubernetes`,
-        },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/study/kubernetes/docs`,
+        name: `kubernetes`,
       },
+    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -104,9 +104,7 @@ module.exports = {
           },
           {
             resolve: `gatsby-remark-prismjs`,
-            options: {
-              
-            },
+            options: {},
           },
         ],
       },
@@ -114,4 +112,3 @@ module.exports = {
   ],
   pathPrefix: `/personal-blog`,
 };
-

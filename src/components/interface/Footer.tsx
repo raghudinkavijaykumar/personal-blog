@@ -1,18 +1,21 @@
-import React from 'react';
-import { makeStyles, Theme } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
+import React from "react";
+import { makeStyles, Theme } from "@material-ui/core/styles";
+import Container from "@material-ui/core/Container";
+import Typography from "@material-ui/core/Typography";
+import Link from "@material-ui/core/Link";
 
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://raghudinkavijaykumar.github.io/personal-blog">
+      {"Copyright © "}
+      <Link
+        color="inherit"
+        href="https://raghudinkavijaykumar.github.io/personal-blog"
+      >
         Your Website
-      </Link>{' '}
+      </Link>{" "}
       {new Date().getFullYear()}
-      {'.'}
+      {"."}
     </Typography>
   );
 }
@@ -25,7 +28,7 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
-export default function Footer(props: { description: string; title: string; }) {
+export default function Footer(props: { description: string; title: string }) {
   const classes = useStyles();
   const { description, title } = props;
 
@@ -35,7 +38,12 @@ export default function Footer(props: { description: string; title: string; }) {
         <Typography variant="h6" align="center" gutterBottom>
           {title}
         </Typography>
-        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+        <Typography
+          variant="subtitle1"
+          align="center"
+          color="textSecondary"
+          component="p"
+        >
           {description}
         </Typography>
         <Copyright />

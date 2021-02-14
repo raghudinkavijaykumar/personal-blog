@@ -1,9 +1,9 @@
-import React from "react";
+import { Container, Grid } from "@material-ui/core";
 import Highlight, { defaultProps } from "prism-react-renderer";
 import theme from "prism-react-renderer/themes/vsDark";
+import React from "react";
 import styled from "styled-components";
-import  copyToClipboard  from "../../utils/CopyToClipboard";
-import { Container, Grid } from "@material-ui/core";
+import copyToClipboard from "../../utils/CopyToClipboard";
 
 export const Pre = styled.pre`
   text-align: left;
@@ -45,7 +45,7 @@ export const Code = (props: any) => {
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <Pre className={className} style={style}>
             <Grid container justify="flex-end">
-            <CopyCode onClick={handleClick}>Copy</CopyCode>
+              <CopyCode onClick={handleClick}>Copy</CopyCode>
             </Grid>
             {tokens.map((line, i) => (
               <div {...getLineProps({ line, key: i })}>
