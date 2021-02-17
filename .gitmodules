@@ -1,3 +1,4 @@
 [submodule "study"]
 	path = study
 	url = https://github.com/raghudinkavijaykumar/study.git
+	branch = main
