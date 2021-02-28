@@ -9,14 +9,13 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-feed`,
-    `gatsby-plugin-styled-components`,
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
       },
-    },
+    } /*
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -30,7 +29,7 @@ module.exports = {
         path: `${__dirname}/study/algorithms/docs`,
         name: `algorithms`,
       },
-    },/*
+    } 
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -51,14 +50,14 @@ module.exports = {
         path: `${__dirname}/study/html/docs`,
         name: `html`
       },
-    },*/
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/study/computational-linguistics/docs`,
         name: `computational-linguistics`,
       },
-    },
+    },*/,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -72,7 +71,7 @@ module.exports = {
           path: `${__dirname}/study/react/docs`,
           name: `react`,
         },
-      },*/,
+      },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -86,27 +85,15 @@ module.exports = {
         path: `${__dirname}/study/kubernetes/docs`,
         name: `kubernetes`,
       },
-    },
+    },*/,
+
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [
-          `gatsby-remark-autolink-headers`,
-          {
-            resolve: `gatsby-remark-table-of-contents`,
-            options: {
-              exclude: "Table of Contents",
-              tight: false,
-              ordered: false,
-              fromHeading: 1,
-              toHeading: 6,
-            },
-          },
-          {
-            resolve: `gatsby-remark-prismjs`,
-            options: {},
-          },
-        ],
+        excerpt_separator: `<!-- endexcerpt -->`,
+        plugins: [`gatsby-remark-autolink-headers`, `gatsby-remark-prismjs`],
       },
     },
   ],
