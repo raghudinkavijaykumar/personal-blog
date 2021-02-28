@@ -1,8 +1,8 @@
-import React from "react";
-import { makeStyles, Theme } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
-import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
+import { makeStyles, Theme } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
+import React from "react";
 
 function Copyright() {
   return (
@@ -34,7 +34,7 @@ export default function Footer(props: { description: string; title: string }) {
 
   return (
     <footer className={classes.footer}>
-      <Container maxWidth="lg">
+      <Container>
         <Typography variant="h6" align="center" gutterBottom>
           {title}
         </Typography>

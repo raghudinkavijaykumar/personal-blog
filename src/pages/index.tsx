@@ -25,7 +25,7 @@ export default (props: {
         />
         <meta name="author" content="Raghu Dinka Vijaykumar"></meta>
       </Helmet>
-      <Container maxWidth="lg">
+      <Container maxWidth={false} style={{ width: "100%" }}>
         <CssBaseline />
         <Layout>
           <IndexWrapper>

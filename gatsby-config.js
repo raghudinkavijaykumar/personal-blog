@@ -30,7 +30,7 @@ module.exports = {
         path: `${__dirname}/study/algorithms/docs`,
         name: `algorithms`,
       },
-    },
+    },/*
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -51,7 +51,7 @@ module.exports = {
         path: `${__dirname}/study/html/docs`,
         name: `html`
       },
-    },*/,
+    },*/
     {
       resolve: `gatsby-source-filesystem`,
       options: {
